@@ -1,13 +1,14 @@
 package com.trizzo.ppmtool.services;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.trizzo.ppmtool.domain.Backlog;
+import com.trizzo.ppmtool.domain.Project;
 import com.trizzo.ppmtool.domain.ProjectTask;
+import com.trizzo.ppmtool.exceptions.ProjectNotFoundException;
 import com.trizzo.ppmtool.repositories.BacklogRepository;
+import com.trizzo.ppmtool.repositories.ProjectRepository;
 import com.trizzo.ppmtool.repositories.ProjectTaskRepository;
 
 @Service
@@ -18,8 +19,14 @@ public class ProjectTaskService {
 
 	@Autowired
 	private ProjectTaskRepository projectTaskRepository;
+	
+	@Autowired
+	private ProjectRepository projectRepository; 
 
 	public ProjectTask addProjectTask(String projectIdentifier, ProjectTask projectTask) {
+		
+		try {
+		
 		Backlog backlog = backlogRepository.findByProjectIdentifier(projectIdentifier);
 		projectTask.setBacklog(backlog);
 		Integer BacklogSequence = backlog.getPTSequence();
@@ -38,9 +45,19 @@ public class ProjectTaskService {
 		}
 
 		return projectTaskRepository.save(projectTask);
+		} catch (Exception e){
+			throw new ProjectNotFoundException("Project not found");
+		}
 	}
 	
 	public Iterable<ProjectTask>findBacklogById(String id) {
+		
+		Project project = projectRepository.findByProjectIdentifier(id);
+		
+		if(project == null) {
+			throw new ProjectNotFoundException("Project with ID: '" + id + "' does not exist");
+		}
+		
 		return projectTaskRepository.findByProjectIdentifierOrderByPriority(id);
 	}
 }

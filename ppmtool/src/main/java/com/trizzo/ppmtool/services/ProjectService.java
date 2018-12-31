@@ -22,7 +22,6 @@ public class ProjectService {
 		
 		try {
 			project.setProjectIdentifier(project.getProjectIdentifier().toUpperCase());
-			// will not accept null. Changed to 0L
 			if(project.getId() == 0L) {
 				Backlog backlog = new Backlog(); 
 				project.setBacklog(backlog);
