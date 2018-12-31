@@ -1,7 +1,5 @@
 package com.trizzo.ppmtool.web;
 
-import java.util.List;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,6 +41,12 @@ public class BacklogController {
 	@GetMapping("/{backlog_id}")
 	public Iterable<ProjectTask> getProjectBacklog(@PathVariable String backlog_id) {
 		return projectTaskService.findBacklogById(backlog_id);
+	}
+	
+	@GetMapping("/{backlog_id}/{pt_id}")
+	public ResponseEntity<?> getProjectTask(@PathVariable String backlog_id, @PathVariable String pt_id) {
+		ProjectTask projectTask = projectTaskService.findPTByProjectSequence(backlog_id, pt_id);
+		return new ResponseEntity<ProjectTask>(projectTask, HttpStatus.OK);
 	}
 	
 }
