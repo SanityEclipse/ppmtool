@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import {
   GET_BACKLOG,
   GET_PROJECT_TASK,
