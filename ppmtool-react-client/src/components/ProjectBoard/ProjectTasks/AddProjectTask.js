@@ -30,11 +30,10 @@ class AddProjectTask extends Component {
     }
   }
 
-  // on change
   onChange(event) {
     this.setState({ [event.target.name]: event.target.value });
   }
-  //on submit
+
   onSubmit(event) {
     event.preventDefault();
 
