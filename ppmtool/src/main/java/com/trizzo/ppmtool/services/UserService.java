@@ -5,6 +5,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.trizzo.ppmtool.domain.User;
+import com.trizzo.ppmtool.exceptions.UsernameAlreadyExistsException;
 import com.trizzo.ppmtool.repositories.UserRepository;
 
 @Service
@@ -17,7 +18,12 @@ public class UserService {
 	private BCryptPasswordEncoder bCryptPasswordEncoder; 
 	
 	public User saveUser(User newUser) {
-		newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));
-		return userRepository.save(newUser); 
+		try {
+			newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));
+			newUser.setUsername(newUser.getUsername());
+			return userRepository.save(newUser); 
+		} catch(Exception e) {
+			throw new UsernameAlreadyExistsException("Username '"+newUser.getUsername()+"' already exists."); 
+		}
 	}
 }
