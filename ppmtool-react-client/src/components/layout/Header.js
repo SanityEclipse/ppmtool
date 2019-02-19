@@ -6,7 +6,7 @@ class Header extends Component {
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-primary mb-4">
         <div className="container">
-          <Link to="Dashboard.html" className="navbar-brand">
+          <Link to="/" className="navbar-brand">
             Personal Project Management Tool
           </Link>
           <button
@@ -29,12 +29,12 @@ class Header extends Component {
 
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link to="register.html" className="nav-link ">
+                <Link to="/register" className="nav-link ">
                   Sign Up
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="login.html" className="nav-link">
+                <Link to="/login" className="nav-link">
                   Login
                 </Link>
               </li>
