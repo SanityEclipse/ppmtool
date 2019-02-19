@@ -66,7 +66,7 @@ class Register extends Component {
                     value={this.state.fullName}
                     onChange={this.onChange}
                   />
-                  {errors.projectName && (
+                  {errors.fullName && (
                     <div className="invalid-feedback">{errors.fullName}</div>
                   )}
                 </div>
@@ -81,7 +81,7 @@ class Register extends Component {
                     value={this.state.username}
                     onChange={this.onChange}
                   />
-                  {errors.projectName && (
+                  {errors.username && (
                     <div className="invalid-feedback">{errors.username}</div>
                   )}
                 </div>
@@ -96,7 +96,7 @@ class Register extends Component {
                     value={this.state.password}
                     onChange={this.onChange}
                   />
-                  {errors.projectName && (
+                  {errors.password && (
                     <div className="invalid-feedback">{errors.password}</div>
                   )}
                 </div>
@@ -111,7 +111,7 @@ class Register extends Component {
                     value={this.state.confirmPassword}
                     onChange={this.onChange}
                   />
-                  {errors.projectName && (
+                  {errors.confirmPassword && (
                     <div className="invalid-feedback">
                       {errors.confirmPassword}
                     </div>
