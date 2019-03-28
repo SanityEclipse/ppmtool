@@ -143,7 +143,7 @@ class AddProjectTask extends Component {
 
 AddProjectTask.propTypes = {
   addProjectTask: PropTypes.func.isRequired,
-  errors: PropTypes.object.required
+  errors: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
