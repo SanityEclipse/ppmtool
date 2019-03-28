@@ -34,7 +34,9 @@ img {
 }
 .landing-signup,
 .register-signup,
-.create-project {
+.create-project,
+.create-project-form,
+.update-project-form {
   color: #000000;
   background-color: #7986cb;
 }
@@ -49,7 +51,9 @@ img {
 .landing-signup:hover,
 .register-confirm:hover,
 .login-confirm:hover,
-.create-project:hover {
+.create-project:hover,
+.create-project-form:hover,
+.update-project-form:hover {
   color: #ffffff;
 }
 
