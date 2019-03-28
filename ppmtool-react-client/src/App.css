@@ -33,7 +33,8 @@ img {
   margin-bottom: -50px;
 }
 .landing-signup,
-.register-signup {
+.register-signup,
+.create-project {
   color: #000000;
   background-color: #7986cb;
 }
@@ -47,33 +48,46 @@ img {
 .landing-login:hover,
 .landing-signup:hover,
 .register-confirm:hover,
-.login-confirm:hover {
+.login-confirm:hover,
+.create-project:hover {
   color: #ffffff;
 }
 
-/*
-.fa.fa-edit {
-  color: #18a2b9;
+.list-group-item.board:hover,
+.list-group-item.update:hover {
+  cursor: -webkit-grab;
+  background-color: #1c313a;
+}
+
+.list-group-item.board,
+.list-group-item.update,
+.list-group-item.delete {
+  color: #ffffff;
+  background-color: #718792;
 }
 
 .list-group-item.delete:hover {
   cursor: -webkit-grab;
-  background-color: pink;
-}
-
-.list-group-item.update:hover {
-  cursor: -webkit-grab;
-  background-color: gainsboro;
-}
-
-.list-group-item.board:hover {
-  cursor: -webkit-grab;
-  background-color: gainsboro;
-}
-
-.fa.fa-minus-circle {
   color: red;
-} */
+  background-color: #1c313a;
+}
+
+.projects-card,
+.card.card-body {
+  background-color: #455a64;
+}
+
+.project-labels > h3 {
+  color: #ffffff;
+}
+
+.project-labels > p {
+  color: #ffffff;
+}
+
+label {
+  color: #ffffff;
+}
 
 /*
 .dark-overlay {

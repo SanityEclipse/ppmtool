@@ -13,12 +13,14 @@ class ProjectItem extends Component {
     const { project } = this.props;
     return (
       <div className="container">
-        <div className="card card-body bg-light mb-3">
-          <div className="row">
+        <div className="card card-body mb-3">
+          <div className="row projects-card">
             <div className="col-2">
-              <span className="mx-auto">{project.projectIdentifier}</span>
+              <label>
+                ID: <span className="mx-auto">{project.projectIdentifier}</span>
+              </label>
             </div>
-            <div className="col-lg-6 col-md-4 col-8">
+            <div className="col-lg-6 col-md-4 col-8 project-labels">
               <h3>{project.projectName}</h3>
               <p>{project.description}</p>
             </div>
