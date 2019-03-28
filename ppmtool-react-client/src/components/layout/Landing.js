@@ -20,10 +20,10 @@ class Landing extends Component {
                 <h1 className="display-3 mb-4">Project Manager Lite</h1>
                 <p className="lead">Create projects. Cross the finish line.</p>
                 <hr />
-                <Link to="/register" className="btn btn-lg btn-primary mr-2">
+                <Link to="/register" className="btn btn-lg mr-2 landing-signup">
                   Sign Up
                 </Link>
-                <Link to="/login" className="btn btn-lg btn-secondary mr-2">
+                <Link to="/login" className="btn btn-lg mr-2 landing-login">
                   Login
                 </Link>
               </div>
