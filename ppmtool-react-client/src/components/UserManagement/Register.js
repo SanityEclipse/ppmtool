@@ -123,7 +123,10 @@ class Register extends Component {
                     </div>
                   )}
                 </div>
-                <input type="submit" className="btn btn-info btn-block mt-4" />
+                <input
+                  type="submit"
+                  className="btn btn-block mt-4 landing-signup"
+                />
               </form>
             </div>
           </div>

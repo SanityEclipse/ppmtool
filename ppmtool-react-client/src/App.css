@@ -1,47 +1,101 @@
+.landing-inner {
+  padding-top: 10%;
+}
+
 img {
   width: 100%;
 }
 
 .navbar {
-  background-color: #e3f2fd;
-}
-.fa.fa-edit {
-  color: #18a2b9;
+  background-color: #455a64;
 }
 
-.list-group-item.delete:hover {
-  cursor: -webkit-grab;
-  background-color: pink;
+.navbar-brand,
+.fas.fa-user,
+.nav-link {
+  color: #ffffff;
 }
 
-.list-group-item.update:hover {
-  cursor: -webkit-grab;
-  background-color: gainsboro;
+.navbar-brand:hover {
+  color: #aab6fe;
 }
 
-.list-group-item.board:hover {
-  cursor: -webkit-grab;
-  background-color: gainsboro;
-}
-
-.fa.fa-minus-circle {
-  color: red;
+.nav-link:hover {
+  color: #aab6fe;
 }
 
 .landing {
   position: relative;
-  /* background: url("../img/showcase.jpg") no-repeat; */
   background-size: cover;
   background-position: center;
   height: 100vh;
   margin-top: -24px;
   margin-bottom: -50px;
 }
-
-.landing-inner {
-  padding-top: 80px;
+.landing-signup,
+.register-signup,
+.create-project,
+.create-project-form,
+.update-project-form,
+.add-task-form {
+  color: #000000;
+  background-color: #7986cb;
 }
 
+.landing-login,
+.login-confirm {
+  color: #000000;
+  background-color: #718792;
+}
+
+.landing-login:hover,
+.landing-signup:hover,
+.register-confirm:hover,
+.login-confirm:hover,
+.create-project:hover,
+.create-project-form:hover,
+.update-project-form:hover,
+.add-task-form:hover {
+  color: #ffffff;
+}
+
+.list-group-item.board:hover,
+.list-group-item.update:hover {
+  cursor: -webkit-grab;
+  background-color: #1c313a;
+}
+
+.list-group-item.board,
+.list-group-item.update,
+.list-group-item.delete {
+  color: #ffffff;
+  background-color: #718792;
+}
+
+.list-group-item.delete:hover {
+  cursor: -webkit-grab;
+  color: red;
+  background-color: #1c313a;
+}
+
+.projects-card,
+.card.card-body {
+  background-color: #455a64;
+}
+
+.project-labels > h3 {
+  color: #ffffff;
+}
+
+.project-labels > p {
+  color: #ffffff;
+}
+
+label {
+  color: #ffffff;
+}
+
+/*
 .dark-overlay {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
@@ -50,15 +104,17 @@ img {
   width: 100%;
   height: 100%;
 }
-
+*/
 .card-form {
   opacity: 0.9;
 }
 
+/*
 .latest-profiles-img {
   width: 40px;
   height: 40px;
 }
+*/
 
 .form-control::placeholder {
   color: #bbb !important;
